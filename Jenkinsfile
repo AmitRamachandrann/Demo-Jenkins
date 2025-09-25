@@ -17,8 +17,8 @@ pipeline {
                 echo 'Registering the metadata'
                 echo 'Another echo to make the pipeline a bit more complex'
                 registerBuildArtifactMetadata(
-                    name: "test-artifact-cherryl",
-                    version: "1.0.0",
+                    name: "test-artifact-demo",
+                    version: "1.0.1",
                     type: "docker",
                     url: "http://non:1111",
                     digest: "6f637064707039346163663237383938",
