@@ -49,9 +49,16 @@ pipeline {
             }
         }
 
-        stage('Publish Test Results') {
+        // stage('Publish Test Results') {
+        //     steps {
+        //         junit 'target/surefire-reports/*.xml'
+        //     }
+        // }
+
+        stage('Stage - 8 - Security Scan') {
             steps {
-                junit 'target/surefire-reports/*.xml'
+                // Getting the scann result and passing it in register security scan
+                registerSecurityScan artifacts: "anchore-findings.json", format: "JSON", scanner: "Anchore"
             }
         }
       
