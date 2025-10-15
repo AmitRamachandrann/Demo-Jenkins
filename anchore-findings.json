@@ -1,0 +1,1617 @@
+[
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": 10,
+          "exploitabilityScore": 10,
+          "impactScore": 10.1
+        },
+        "cvssV3": {
+          "baseScore": 7.3,
+          "exploitabilityScore": 1.4,
+          "impactScore": 5.9
+        },
+        "id": "CVE-2022-2068"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2068",
+    "vendorData": [],
+    "vuln": "CVE-2022-2068",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.5,
+          "exploitabilityScore": 3.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2023-0215"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0215",
+    "vendorData": [],
+    "vuln": "CVE-2023-0215",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 9.1,
+          "exploitabilityScore": 3.9,
+          "impactScore": 5.2
+        },
+        "id": "CVE-2024-5535"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Critical",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5535",
+    "vendorData": [],
+    "vuln": "CVE-2024-5535",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 9.1,
+          "exploitabilityScore": 3.9,
+          "impactScore": 5.2
+        },
+        "id": "CVE-2024-5535"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Critical",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5535",
+    "vendorData": [],
+    "vuln": "CVE-2024-5535",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2023-0466"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0466",
+    "vendorData": [],
+    "vuln": "CVE-2023-0466",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 6.5,
+          "exploitabilityScore": 2.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2023-2650"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-2650",
+    "vendorData": [],
+    "vuln": "CVE-2023-2650",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2023-3817"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3817",
+    "vendorData": [],
+    "vuln": "CVE-2023-3817",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 8.1,
+          "exploitabilityScore": 1.5,
+          "impactScore": 6
+        },
+        "id": "CVE-2025-26519"
+      }
+    ],
+    "package": "musl-utils-1.1.24-r10",
+    "packageCpe": "None",
+    "packageName": "musl-utils",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.24-r10",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-26519",
+    "vendorData": [],
+    "vuln": "CVE-2025-26519",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.5,
+          "exploitabilityScore": 3.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2023-0464"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0464",
+    "vendorData": [],
+    "vuln": "CVE-2023-0464",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 9.8,
+          "exploitabilityScore": 3.9,
+          "impactScore": 5.9
+        },
+        "id": "CVE-2023-45853"
+      }
+    ],
+    "package": "zlib-1.2.12-r0",
+    "packageCpe": "None",
+    "packageName": "zlib",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.2.12-r0",
+    "severity": "Critical",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-45853",
+    "vendorData": [],
+    "vuln": "CVE-2023-45853",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 9.8,
+          "exploitabilityScore": 3.9,
+          "impactScore": 5.9
+        },
+        "id": "CVE-2022-48174"
+      }
+    ],
+    "package": "ssl_client-1.31.1-r22",
+    "packageCpe": "None",
+    "packageName": "ssl_client",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.31.1-r22",
+    "severity": "Critical",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174",
+    "vendorData": [],
+    "vuln": "CVE-2022-48174",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.5,
+          "exploitabilityScore": 3.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2023-0464"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0464",
+    "vendorData": [],
+    "vuln": "CVE-2023-0464",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 4.1,
+          "exploitabilityScore": 0.7,
+          "impactScore": 3.4
+        },
+        "id": "CVE-2024-13176"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-13176",
+    "vendorData": [],
+    "vuln": "CVE-2024-13176",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.8,
+          "exploitabilityScore": 1.9,
+          "impactScore": 5.9
+        },
+        "id": "CVE-2023-4807"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4807",
+    "vendorData": [],
+    "vuln": "CVE-2023-4807",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.9,
+          "exploitabilityScore": 2.3,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2024-2511"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-2511",
+    "vendorData": [],
+    "vuln": "CVE-2024-2511",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 4.3,
+          "exploitabilityScore": 2.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2024-9143"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9143",
+    "vendorData": [],
+    "vuln": "CVE-2024-9143",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.5,
+          "exploitabilityScore": 3.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2022-4450"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4450",
+    "vendorData": [],
+    "vuln": "CVE-2022-4450",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": 10,
+          "exploitabilityScore": 10,
+          "impactScore": 10.1
+        },
+        "cvssV3": {
+          "baseScore": 7.3,
+          "exploitabilityScore": 1.4,
+          "impactScore": 5.9
+        },
+        "id": "CVE-2022-2068"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2068",
+    "vendorData": [],
+    "vuln": "CVE-2022-2068",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 2.5,
+          "exploitabilityScore": 1.1,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2024-58251"
+      }
+    ],
+    "package": "busybox-1.31.1-r22",
+    "packageCpe": "None",
+    "packageName": "busybox",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.31.1-r22",
+    "severity": "Low",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58251",
+    "vendorData": [],
+    "vuln": "CVE-2024-58251",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 4.3,
+          "exploitabilityScore": 2.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2024-9143"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9143",
+    "vendorData": [],
+    "vuln": "CVE-2024-9143",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 4.1,
+          "exploitabilityScore": 0.7,
+          "impactScore": 3.4
+        },
+        "id": "CVE-2024-13176"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-13176",
+    "vendorData": [],
+    "vuln": "CVE-2024-13176",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.8,
+          "exploitabilityScore": 1.9,
+          "impactScore": 5.9
+        },
+        "id": "CVE-2023-4807"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4807",
+    "vendorData": [],
+    "vuln": "CVE-2023-4807",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.9,
+          "exploitabilityScore": 2.3,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2024-2511"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-2511",
+    "vendorData": [],
+    "vuln": "CVE-2024-2511",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.5,
+          "exploitabilityScore": 3.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2022-4450"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4450",
+    "vendorData": [],
+    "vuln": "CVE-2022-4450",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2023-5678"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-5678",
+    "vendorData": [],
+    "vuln": "CVE-2023-5678",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.4,
+          "exploitabilityScore": 2.3,
+          "impactScore": 5.2
+        },
+        "id": "CVE-2023-0286"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0286",
+    "vendorData": [],
+    "vuln": "CVE-2023-0286",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2023-0465"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0465",
+    "vendorData": [],
+    "vuln": "CVE-2023-0465",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2023-3817"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3817",
+    "vendorData": [],
+    "vuln": "CVE-2023-3817",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.4,
+          "exploitabilityScore": 2.3,
+          "impactScore": 5.2
+        },
+        "id": "CVE-2023-0286"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0286",
+    "vendorData": [],
+    "vuln": "CVE-2023-0286",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.5,
+          "exploitabilityScore": 3.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2024-4741"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4741",
+    "vendorData": [],
+    "vuln": "CVE-2024-4741",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.5,
+          "exploitabilityScore": 1.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2024-0727"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0727",
+    "vendorData": [],
+    "vuln": "CVE-2024-0727",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2023-3446"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3446",
+    "vendorData": [],
+    "vuln": "CVE-2023-3446",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.9,
+          "exploitabilityScore": 2.3,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2022-4304"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4304",
+    "vendorData": [],
+    "vuln": "CVE-2022-4304",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 6.5,
+          "exploitabilityScore": 2.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2023-2650"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-2650",
+    "vendorData": [],
+    "vuln": "CVE-2023-2650",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2023-0466"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0466",
+    "vendorData": [],
+    "vuln": "CVE-2023-0466",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 9.8,
+          "exploitabilityScore": 3.9,
+          "impactScore": 5.9
+        },
+        "id": "CVE-2022-48174"
+      }
+    ],
+    "package": "busybox-1.31.1-r22",
+    "packageCpe": "None",
+    "packageName": "busybox",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.31.1-r22",
+    "severity": "Critical",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174",
+    "vendorData": [],
+    "vuln": "CVE-2022-48174",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.5,
+          "exploitabilityScore": 3.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2024-4741"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4741",
+    "vendorData": [],
+    "vuln": "CVE-2024-4741",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 7.5,
+          "exploitabilityScore": 3.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2023-0215"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0215",
+    "vendorData": [],
+    "vuln": "CVE-2023-0215",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 8.1,
+          "exploitabilityScore": 1.5,
+          "impactScore": 6
+        },
+        "id": "CVE-2025-26519"
+      }
+    ],
+    "package": "musl-1.1.24-r10",
+    "packageCpe": "None",
+    "packageName": "musl",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.24-r10",
+    "severity": "High",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-26519",
+    "vendorData": [],
+    "vuln": "CVE-2025-26519",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "alpine:3.12",
+    "fix": "1.2.12-r2",
+    "fixObservedAt": "2023-12-18T02:57:20Z",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 9.8,
+          "exploitabilityScore": 3.9,
+          "impactScore": 5.9
+        },
+        "id": "CVE-2022-37434"
+      }
+    ],
+    "package": "zlib-1.2.12-r0",
+    "packageCpe": "None",
+    "packageName": "zlib",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.2.12-r0",
+    "severity": "Critical",
+    "url": "https://security.alpinelinux.org/vuln/CVE-2022-37434",
+    "vendorData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 9.8,
+          "exploitabilityScore": 3.9,
+          "impactScore": 5.9
+        },
+        "id": "CVE-2022-37434"
+      }
+    ],
+    "vuln": "CVE-2022-37434",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.9,
+          "exploitabilityScore": 2.3,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2022-4304"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4304",
+    "vendorData": [],
+    "vuln": "CVE-2022-4304",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2023-0465"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0465",
+    "vendorData": [],
+    "vuln": "CVE-2023-0465",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.5,
+          "exploitabilityScore": 1.9,
+          "impactScore": 3.6
+        },
+        "id": "CVE-2024-0727"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0727",
+    "vendorData": [],
+    "vuln": "CVE-2024-0727",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": 5,
+          "exploitabilityScore": 10,
+          "impactScore": 2.9
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2022-2097"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2097",
+    "vendorData": [],
+    "vuln": "CVE-2022-2097",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 2.5,
+          "exploitabilityScore": 1.1,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2024-58251"
+      }
+    ],
+    "package": "ssl_client-1.31.1-r22",
+    "packageCpe": "None",
+    "packageName": "ssl_client",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.31.1-r22",
+    "severity": "Low",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58251",
+    "vendorData": [],
+    "vuln": "CVE-2024-58251",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": 5,
+          "exploitabilityScore": 10,
+          "impactScore": 2.9
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2022-2097"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2097",
+    "vendorData": [],
+    "vuln": "CVE-2022-2097",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 3.3,
+          "exploitabilityScore": 1.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2025-46394"
+      }
+    ],
+    "package": "ssl_client-1.31.1-r22",
+    "packageCpe": "None",
+    "packageName": "ssl_client",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.31.1-r22",
+    "severity": "Low",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394",
+    "vendorData": [],
+    "vuln": "CVE-2025-46394",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2023-5678"
+      }
+    ],
+    "package": "libssl1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libssl1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-5678",
+    "vendorData": [],
+    "vuln": "CVE-2023-5678",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 3.3,
+          "exploitabilityScore": 1.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2025-46394"
+      }
+    ],
+    "package": "busybox-1.31.1-r22",
+    "packageCpe": "None",
+    "packageName": "busybox",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.31.1-r22",
+    "severity": "Low",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394",
+    "vendorData": [],
+    "vuln": "CVE-2025-46394",
+    "willNotFix": false
+  },
+  {
+    "detectedAt": "2025-10-03T06:41:28Z",
+    "feed": "vulnerabilities",
+    "feedGroup": "nvd",
+    "fix": "None",
+    "nvdData": [
+      {
+        "cvssV2": {
+          "baseScore": -1,
+          "exploitabilityScore": -1,
+          "impactScore": -1
+        },
+        "cvssV3": {
+          "baseScore": 5.3,
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.5
+        },
+        "id": "CVE-2023-3446"
+      }
+    ],
+    "package": "libcrypto1.1-1.1.1n-r0",
+    "packageCpe": "None",
+    "packageName": "libcrypto1.1",
+    "packagePath": "pkgdb",
+    "packageType": "APKG",
+    "packageVersion": "1.1.1n-r0",
+    "severity": "Medium",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3446",
+    "vendorData": [],
+    "vuln": "CVE-2023-3446",
+    "willNotFix": false
+  }
+]
