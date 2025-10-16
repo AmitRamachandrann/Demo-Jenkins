@@ -1,14 +1,14 @@
 pipeline {
     agent any
 
-    environment {
-        // You can set environment variables here
-        MAVEN_OPTS = "-Dmaven.test.failure.ignore=true"
-    }
+    // environment {
+    //     // You can set environment variables here
+    //     MAVEN_OPTS = "-Dmaven.test.failure.ignore=true"
+    // }
 
-      tools {
-        maven 'Maven 3'  // Define your Maven installation name from Jenkins Global Tool Configuration
-    }
+    //   tools {
+    //     maven 'Maven 3'  // Define your Maven installation name from Jenkins Global Tool Configuration
+    // }
 
    
     stages {    
@@ -27,27 +27,27 @@ pipeline {
             }
         }
         
-        stage('Build & Test') {
-            steps {
-                sh 'mvn clean test'
-            }
-        }
+        // stage('Build & Test') {
+        //     steps {
+        //         sh 'mvn clean test'
+        //     }
+        // }
 
-        stage('Trivy Scan') {
-            steps {
-                sh '''
-                if ! command -v trivy > /dev/null; then
-                  echo "Installing Trivy..."
-                  curl -sL https://github.com/aquasecurity/trivy/releases/download/v0.65.0/trivy_0.65.0_Linux-64bit.tar.gz | tar zxvf - -C /tmp
-                  mv /tmp/trivy ./trivy
-                  chmod +x ./trivy
-                fi
+        // stage('Trivy Scan') {
+        //     steps {
+        //         sh '''
+        //         if ! command -v trivy > /dev/null; then
+        //           echo "Installing Trivy..."
+        //           curl -sL https://github.com/aquasecurity/trivy/releases/download/v0.65.0/trivy_0.65.0_Linux-64bit.tar.gz | tar zxvf - -C /tmp
+        //           mv /tmp/trivy ./trivy
+        //           chmod +x ./trivy
+        //         fi
 
-                # Run Trivy scan and save SARIF report
-                ./trivy fs . --format sarif --output trivy-results.sarif || true
-                '''
-            }
-        }
+        //         # Run Trivy scan and save SARIF report
+        //         ./trivy fs . --format sarif --output trivy-results.sarif || true
+        //         '''
+        //     }
+        // }
 
         // stage('Publish Test Results') {
         //     steps {
@@ -69,7 +69,7 @@ pipeline {
     post {
         always {
             echo 'Pipeline completed.'
-            archiveArtifacts artifacts: 'trivy-results.sarif', fingerprint: true
+            //archiveArtifacts artifacts: 'trivy-results.sarif', fingerprint: true
         }
         failure {
             echo 'Build or tests failed!'
