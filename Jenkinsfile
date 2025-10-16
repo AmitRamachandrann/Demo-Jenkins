@@ -5,7 +5,6 @@ pipeline {
         stage('Registering build artifact') {
             steps {
                 echo 'Registering the metadata'
-                echo 'Another echo to make the pipeline a bit more complex'
                 registerBuildArtifactMetadata(
                     name: "test-artifact-demo",
                     version: "1.0.1",
@@ -20,12 +19,10 @@ pipeline {
         stage('Register Security Scan') {
             steps {
                 script {
-                    def anchoreFile = "${env.WORKSPACE}/anchore-findings.json"
-                    echo "Anchore findings file path: ${anchoreFile}"
-                    if (fileExists(anchoreFile)) {
+                    if (fileExists("anchore-findings.json")) {
                         echo "File exists, registering scan..."
                         registerSecurityScan(
-                            artifacts: anchoreFile,
+                            artifacts: "anchore-findings.json",
                             format: "JSON",
                             scanner: "Anchore"
                         )
@@ -40,7 +37,6 @@ pipeline {
     post {
         always {
             echo 'Pipeline completed.'
-            // archiveArtifacts artifacts: 'trivy-results.sarif', fingerprint: true
         }
         failure {
             echo 'Build or tests failed!'
