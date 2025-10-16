@@ -24,7 +24,8 @@ pipeline {
                         registerSecurityScan(
                             artifacts: "anchore-findings.json",
                             format: "JSON",
-                            scanner: "Anchore"
+                            scanner: "Anchore",
+                            archive: false
                         )
                     } else {
                         error "anchore-findings.json not found!"
