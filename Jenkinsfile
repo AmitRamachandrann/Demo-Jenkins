@@ -59,10 +59,20 @@ pipeline {
             steps {
                 // Getting the scann result and passing it in register security scan
                 registerSecurityScan artifacts: "anchore-findings.json", format: "JSON", scanner: "Anchore"
+                script {
+                    def anchoreFile = "${env.WORKSPACE}/anchore-findings.json"
+                    echo "Anchore findings file path: ${anchoreFile}"
+                    if (fileExists(anchoreFile)) {
+                        echo "File exists, registering scan..."
+                        registerSecurityScan artifacts: anchoreFile, format: "JSON", scanner: "Anchore"
+                    } else {
+                        error "anchore-findings.json not found!"
+                    }
+                }
             }
         }
       
-    }
+    
      
 
 
