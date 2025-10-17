@@ -88,7 +88,7 @@ pipeline {
         stage('Export Sonar Findings') {
             steps{
                 withCredentials([string(credentialsId: 'sonarqube-preprod-token', variable: 'SONAR_TOKEN')]) {
-                    exportSonarQubeSARIF("$PROJECT_KEY", "$SONAR_HOST", "$SONAR_TOKEN")
+                    exportSonarQubeScan("$PROJECT_KEY", "$SONAR_HOST", "$SONAR_TOKEN")
                 }
             }
         }
