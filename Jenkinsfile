@@ -90,8 +90,8 @@ pipeline {
                 withCredentials([string(credentialsId: 'sonarqube-preprod-token', variable: 'SONAR_TOKEN')]) {
                     exportSonarQubeScan(
                         project: "$PROJECT_KEY",
-                        server: "$SONAR_HOST",
-                        credentials: "$SONAR_TOKEN"
+                        host: "$SONAR_HOST",
+                        credentialId: "$SONAR_TOKEN"
                     )
                 }
             }
