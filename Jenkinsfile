@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SONAR_HOST = "https://sonarqube.saas-preprod.beescloud.com"
-        PROJECT_KEY = "sarif__bash_test_${env.BUILD_NUMBER}"
+        PROJECT_KEY = "sarif_exportSonarScan_test_${env.BUILD_NUMBER}"
         SCANNER_VERSION = "5.0.1.3006"
         SCANNER_HOME = "${WORKSPACE}/sonar-scanner-5.0.1.3006"
         JAVA_HOME = "${WORKSPACE}/jdk17"
