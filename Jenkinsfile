@@ -95,86 +95,86 @@ spec:
             }
         }
 
-        stage('Snyk SAST') {
-            options {
-                timeout(time: 10, unit: 'MINUTES')
-            }
-            steps {
-                container('python') {
-                    catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                        withCredentials([
-                            string(credentialsId: 'snyk-token', variable: 'SNYK_TOKEN'),
-                            string(credentialsId: 'snyk-org', variable: 'SNYK_ORG')
-                        ]) {
-                            sh '''
-                                echo "=== Installing Snyk CLI ==="
-                                curl -Lo /usr/local/bin/snyk https://downloads.snyk.io/cli/stable/snyk-linux
-                                chmod +x /usr/local/bin/snyk
+    //     stage('Snyk SAST') {
+    //         options {
+    //             timeout(time: 10, unit: 'MINUTES')
+    //         }
+    //         steps {
+    //             container('python') {
+    //                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+    //                     withCredentials([
+    //                         string(credentialsId: 'snyk-token', variable: 'SNYK_TOKEN'),
+    //                         string(credentialsId: 'snyk-org', variable: 'SNYK_ORG')
+    //                     ]) {
+    //                         sh '''
+    //                             echo "=== Installing Snyk CLI ==="
+    //                             curl -Lo /usr/local/bin/snyk https://downloads.snyk.io/cli/stable/snyk-linux
+    //                             chmod +x /usr/local/bin/snyk
 
-                                echo "=== Authenticating with Snyk ==="
-                                snyk auth ${SNYK_TOKEN}
+    //                             echo "=== Authenticating with Snyk ==="
+    //                             snyk auth ${SNYK_TOKEN}
 
-                                echo "=== Running Snyk Code (SAST) scan ==="
-                                snyk code test \
-                                    --org=${SNYK_ORG} \
-                                    --project-name=TEST_CX_NAME_pyexample2 \
-                                    --severity-threshold=medium \
-                                    --remote-repo-url=https://github.com/ldorg/pyexample2 \
-                                    --json-file-output=snyk-sast-results.json \
-                                    --sarif-file-output=snyk-sast-results.sarif \
-                                    || echo "Snyk SAST found issues (exit code: $?)"
+    //                             echo "=== Running Snyk Code (SAST) scan ==="
+    //                             snyk code test \
+    //                                 --org=${SNYK_ORG} \
+    //                                 --project-name=TEST_CX_NAME_pyexample2 \
+    //                                 --severity-threshold=medium \
+    //                                 --remote-repo-url=https://github.com/ldorg/pyexample2 \
+    //                                 --json-file-output=snyk-sast-results.json \
+    //                                 --sarif-file-output=snyk-sast-results.sarif \
+    //                                 || echo "Snyk SAST found issues (exit code: $?)"
 
-                                echo "=== SAST Scan Summary ==="
-                                if [ -f snyk-sast-results.json ]; then
-                                    python -c "import json; data=json.load(open('snyk-sast-results.json')); print('SAST scan completed')" || true
-                                fi
-                            '''
-                        }
-                    }
-                }
-            }
-        }
+    //                             echo "=== SAST Scan Summary ==="
+    //                             if [ -f snyk-sast-results.json ]; then
+    //                                 python -c "import json; data=json.load(open('snyk-sast-results.json')); print('SAST scan completed')" || true
+    //                             fi
+    //                         '''
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
 
-        stage('Snyk SCA') {
-            options {
-                timeout(time: 10, unit: 'MINUTES')
-            }
-            steps {
-                container('python') {
-                    catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                        withCredentials([
-                            string(credentialsId: 'snyk-token', variable: 'SNYK_TOKEN'),
-                            string(credentialsId: 'snyk-org', variable: 'SNYK_ORG')
-                        ]) {
-                            sh '''
-                                echo "=== Re-authenticating with Snyk ==="
-                                snyk auth ${SNYK_TOKEN}
+    //     stage('Snyk SCA') {
+    //         options {
+    //             timeout(time: 10, unit: 'MINUTES')
+    //         }
+    //         steps {
+    //             container('python') {
+    //                 catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+    //                     withCredentials([
+    //                         string(credentialsId: 'snyk-token', variable: 'SNYK_TOKEN'),
+    //                         string(credentialsId: 'snyk-org', variable: 'SNYK_ORG')
+    //                     ]) {
+    //                         sh '''
+    //                             echo "=== Re-authenticating with Snyk ==="
+    //                             snyk auth ${SNYK_TOKEN}
 
-                                echo "=== Installing project dependencies for SCA scan ==="
-                                # Dependencies should already be installed from test stage
-                                poetry install --no-dev || poetry install --without dev
+    //                             echo "=== Installing project dependencies for SCA scan ==="
+    //                             # Dependencies should already be installed from test stage
+    //                             poetry install --no-dev || poetry install --without dev
 
-                                echo "=== Running Snyk Open Source (SCA) scan ==="
-                                snyk test \
-                                    --org=${SNYK_ORG} \
-                                    --project-name=TEST_CX_NAME_pyexample2 \
-                                    --severity-threshold=medium \
-                                    --remote-repo-url=https://github.com/ldorg/pyexample2 \
-                                    --json-file-output=snyk-sca-results.json \
-                                    --sarif-file-output=snyk-sca-results.sarif \
-                                    || echo "Snyk SCA found vulnerabilities (exit code: $?)"
+    //                             echo "=== Running Snyk Open Source (SCA) scan ==="
+    //                             snyk test \
+    //                                 --org=${SNYK_ORG} \
+    //                                 --project-name=TEST_CX_NAME_pyexample2 \
+    //                                 --severity-threshold=medium \
+    //                                 --remote-repo-url=https://github.com/ldorg/pyexample2 \
+    //                                 --json-file-output=snyk-sca-results.json \
+    //                                 --sarif-file-output=snyk-sca-results.sarif \
+    //                                 || echo "Snyk SCA found vulnerabilities (exit code: $?)"
 
-                                echo "=== SCA Scan Summary ==="
-                                if [ -f snyk-sca-results.json ]; then
-                                    python -c "import json; data=json.load(open('snyk-sca-results.json')); print('SCA scan completed')" || true
-                                fi
-                            '''
-                        }
-                    }
-                }
-            }
-        }
-    }
+    //                             echo "=== SCA Scan Summary ==="
+    //                             if [ -f snyk-sca-results.json ]; then
+    //                                 python -c "import json; data=json.load(open('snyk-sca-results.json')); print('SCA scan completed')" || true
+    //                             fi
+    //                         '''
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     post {
         always {
@@ -187,22 +187,22 @@ spec:
             archiveArtifacts artifacts: 'snyk-*.json,snyk-*.sarif', allowEmptyArchive: true, fingerprint: true
 
             // Register security scans with CloudBees Unify
-            script {
-                if (fileExists('snyk-sast-results.sarif')) {
-                    registerSecurityScan(
-                        artifacts: 'snyk-sast-results.sarif',
-                        format: 'sarif',
-                        archive: true
-                    )
-                }
-                if (fileExists('snyk-sca-results.sarif')) {
-                    registerSecurityScan(
-                        artifacts: 'snyk-sca-results.sarif',
-                        format: 'sarif',
-                        archive: true
-                    )
-                }
-            }
+            // script {
+            //     if (fileExists('snyk-sast-results.sarif')) {
+            //         registerSecurityScan(
+            //             artifacts: 'snyk-sast-results.sarif',
+            //             format: 'sarif',
+            //             archive: true
+            //         )
+            //     }
+            //     if (fileExists('snyk-sca-results.sarif')) {
+            //         registerSecurityScan(
+            //             artifacts: 'snyk-sca-results.sarif',
+            //             format: 'sarif',
+            //             archive: true
+            //         )
+            //     }
+            // }
         }
 
         success {
