@@ -127,6 +127,7 @@ spec:
                 }
             }
         }
+    }
         post {
             always {
                 // Archvie JUnit test results
@@ -134,5 +135,4 @@ spec:
             }
         }
 
-    }
 }
