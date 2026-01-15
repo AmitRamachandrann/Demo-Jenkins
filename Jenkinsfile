@@ -105,7 +105,8 @@ spec:
                         tar -czf demo-firmware-${env.VERSION}.tar.gz -C dist .
                     """
                     archiveArtifacts artifacts: "demo-firmware-${env.VERSION}.tar.gz", fingerprint: true
-                    archiveArtifacts artifacts: "test-results.xml", fingerprint: true
+                    // Archvie JUnit test results
+                    archiveArtifacts artifacts: '*.xml', allowEmptyArchive: true, fingerprint: true
                     
 
                     script {
