@@ -127,5 +127,12 @@ spec:
                 }
             }
         }
+        post {
+            always {
+                // Archvie JUnit test results
+                archiveArtifacts artifacts: '*.xml', allowEmptyArchive: true, fingerprint: true
+            }
+        }
+
     }
 }
