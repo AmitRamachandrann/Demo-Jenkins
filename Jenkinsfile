@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+ 
     environment {
         // You can set environment variables here
         MAVEN_OPTS = "-Dmaven.test.failure.ignore=true"
