@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "py-gha"
+version = "1.0.0"
+description = "Enterprise Hello World Flask Application for CloudBees Unify Demo"
+authors = ["CloudBees"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+flask = "3.0.0"
+werkzeug = "3.0.1"
+
+# Vulnerable dependencies added for demo purposes
+aiohttp = "3.9.1"
+certifi = "2024.2.2"
+tornado = "6.4.0"
+django = "4.2.13"
+idna = "3.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "7.4.3"
+pytest-cov = "7.0.0"
+black = "23.12.1"
+flake8 = "7.0.0"
+
+[tool.poetry.scripts]
+py-gha = "app.main:app.run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
