@@ -178,7 +178,8 @@ spec:
 
     post {
         always {
-            // Publish JUnit test results
+            // Archvie JUnit test results
+            archiveArtifacts artifacts: '*.xml', allowEmptyArchive: true, fingerprint: true
 
             // Archive coverage reports
             archiveArtifacts artifacts: 'coverage.md,coverage-html/**', allowEmptyArchive: false, fingerprint: true
