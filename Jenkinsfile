@@ -4,221 +4,125 @@ pipeline {
             yaml '''
 apiVersion: v1
 kind: Pod
-metadata:
-  labels:
-    jenkins: agent
-    app: pyexample2-ci
 spec:
   containers:
-  - name: python
-    image: python:3.13
+  - name: build
+    image: ubuntu:24.04
     command:
-    - cat
-    tty: true
-    resources:
-      requests:
-        memory: "768Mi"
-        cpu: "500m"
-      limits:
-        memory: "1.5Gi"
-        cpu: "1000m"
+    - sleep
+    args:
+    - 99d
 '''
-            defaultContainer 'python'
         }
     }
 
     environment {
-        POETRY_VERSION = '1.7.1'
-        POETRY_HOME = '/opt/poetry'
-        POETRY_VIRTUALENVS_IN_PROJECT = 'true'
-        POETRY_NO_INTERACTION = '1'
-        PYTHONUNBUFFERED = '1'
-        SNYK_INTEGRATION_NAME = 'JENKINS'
-    }
-
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '10'))
-        timeout(time: 30, unit: 'MINUTES')
+        CMAKE_BUILD_TYPE = 'Release'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
-                script {
-                    // Fix git safe directory issue in containers
-                    sh 'git config --global --add safe.directory "*"'
-
-                    env.GIT_COMMIT_SHORT = sh(
-                        script: "git rev-parse --short HEAD",
-                        returnStdout: true
-                    ).trim()
-                    env.GIT_BRANCH_NAME = sh(
-                        script: "git rev-parse --abbrev-ref HEAD",
-                        returnStdout: true
-                    ).trim()
-                    echo "Building commit ${env.GIT_COMMIT_SHORT} on branch ${env.GIT_BRANCH_NAME}"
+                container('build') {
+                    checkout([
+                        $class: 'GitSCM',
+                        branches: scm.branches,
+                        userRemoteConfigs: scm.userRemoteConfigs,
+                        extensions: [[$class: 'SubmoduleOption', disableSubmodules: true]]
+                    ])
                 }
             }
         }
 
-        stage('Test') {
-            options {
-                timeout(time: 10, unit: 'MINUTES')
-            }
+        stage('Setup Tools') {
             steps {
-                container('python') {
-                    sh '''
-                        echo "=== Installing Poetry ==="
-                        pip install --no-cache-dir poetry==${POETRY_VERSION}
-
-                        echo "=== Poetry version ==="
-                        poetry --version
-
-                        echo "=== Installing dependencies ==="
-                        poetry install --with dev --no-root
-
-                        echo "=== Running tests with coverage ==="
-                        poetry run pytest \
-                            --junitxml=test-results.xml \
-                            --cov=app \
-                            --cov-report=markdown:coverage.md \
-                            --cov-report=term \
-                            --cov-report=html:coverage-html \
-                            -v
-
-                        echo "=== Coverage Summary ==="
-                        cat coverage.md
-                    '''
-                    junit 'test-results.xml'
+                container('build') {
+                    sh 'apt-get update && apt-get install -y build-essential cmake cppcheck clang-format git coreutils python3-pyparsing python3-junit.xml'
                 }
             }
         }
 
-        stage('Snyk SAST') {
-            options {
-                timeout(time: 10, unit: 'MINUTES')
-            }
+        stage('Update Submodules') {
             steps {
-                container('python') {
-                    catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                        withCredentials([
-                            string(credentialsId: 'snyk-token', variable: 'SNYK_TOKEN'),
-                            string(credentialsId: 'snyk-org', variable: 'SNYK_ORG')
-                        ]) {
-                            sh '''
-                                echo "=== Installing Snyk CLI ==="
-                                curl -Lo /usr/local/bin/snyk https://downloads.snyk.io/cli/stable/snyk-linux
-                                chmod +x /usr/local/bin/snyk
+                container('build') {
+                    sh 'git config --global --add safe.directory ${WORKSPACE}'
+                    sh 'git submodule update --init --recursive'
+                }
+            }
+        }
 
-                                echo "=== Authenticating with Snyk ==="
-                                snyk auth ${SNYK_TOKEN}
-
-                                echo "=== Running Snyk Code (SAST) scan ==="
-                                snyk code test \
-                                    --org=${SNYK_ORG} \
-                                    --project-name=TEST_CX_NAME_pyexample2 \
-                                    --severity-threshold=medium \
-                                    --remote-repo-url=https://github.com/ldorg/pyexample2 \
-                                    --json-file-output=snyk-sast-results.json \
-                                    --sarif-file-output=snyk-sast-results.sarif \
-                                    || echo "Snyk SAST found issues (exit code: $?)"
-
-                                echo "=== SAST Scan Summary ==="
-                                if [ -f snyk-sast-results.json ]; then
-                                    python -c "import json; data=json.load(open('snyk-sast-results.json')); print('SAST scan completed')" || true
-                                fi
-                            '''
+        stage('CI') {
+            parallel {
+                stage('Test') {
+                    steps {
+                        container('build') {
+                            sh 'make test-ci'
+                            junit 'test-results.xml'
+                        }
+                    }
+                }
+                stage('Lint') {
+                    steps {
+                        container('build') {
+                            sh 'cppcheck --enable=all --error-exitcode=1 --suppress=missingIncludeSystem src/ || true'
+                            sh 'find src/ include/ tests/ -name "*.c" -o -name "*.h" | xargs clang-format --dry-run -Werror || true'
+                        }
+                    }
+                }
+                stage('Scan') {
+                    steps {
+                        container('build') {
+                            // TODO: Add Black Duck SCA scan
+                            // This will require credentials to be configured in Jenkins
+                            echo 'TODO: Run Black Duck SCA scan'
+                            script {
+                                env.MY_VAR = "Hello from CI"
+                            }
                         }
                     }
                 }
             }
         }
 
-        stage('Snyk SCA') {
-            options {
-                timeout(time: 10, unit: 'MINUTES')
+        stage('Build and Deploy') {
+            when {
+                branch 'main'
             }
             steps {
-                container('python') {
-                    catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
-                        withCredentials([
-                            string(credentialsId: 'snyk-token', variable: 'SNYK_TOKEN'),
-                            string(credentialsId: 'snyk-org', variable: 'SNYK_ORG')
-                        ]) {
-                            sh '''
-                                echo "=== Re-authenticating with Snyk ==="
-                                snyk auth ${SNYK_TOKEN}
-
-                                echo "=== Installing project dependencies for SCA scan ==="
-                                # Dependencies should already be installed from test stage
-                                poetry install --no-dev || poetry install --without dev
-
-                                echo "=== Running Snyk Open Source (SCA) scan ==="
-                                snyk test \
-                                    --org=${SNYK_ORG} \
-                                    --project-name=TEST_CX_NAME_pyexample2 \
-                                    --severity-threshold=medium \
-                                    --remote-repo-url=https://github.com/ldorg/pyexample2 \
-                                    --json-file-output=snyk-sca-results.json \
-                                    --sarif-file-output=snyk-sca-results.sarif \
-                                    || echo "Snyk SCA found vulnerabilities (exit code: $?)"
-
-                                echo "=== SCA Scan Summary ==="
-                                if [ -f snyk-sca-results.json ]; then
-                                    python -c "import json; data=json.load(open('snyk-sca-results.json')); print('SCA scan completed')" || true
-                                fi
-                            '''
-                        }
+                container('build') {
+                    script {
+                        def commitCount = sh(script: 'git rev-list --count HEAD', returnStdout: true).trim()
+                        def shortSha = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+                        env.VERSION = "1.0.0-${commitCount}-${shortSha}"
+                        echo "Setting version to: ${env.VERSION}"
                     }
+                    sh 'make clean'
+                    sh 'make release'
+                    sh """
+                        mkdir -p dist
+                        cp build/src/demo-firmware dist/
+                        cp README.md dist/
+                        tar -czf demo-firmware-${env.VERSION}.tar.gz -C dist .
+                    """
+                    archiveArtifacts artifacts: "demo-firmware-${env.VERSION}.tar.gz", fingerprint: true
+
+                    script {
+                        def digest = sh(script: "sha256sum demo-firmware-${env.VERSION}.tar.gz | awk '{print \$1}'", returnStdout: true).trim()
+
+                        registerBuildArtifactMetadata(
+                            name: env.JOB_NAME,
+                            version: env.VERSION,
+                            type: 'Binary',
+                            label: 'main,c,cmake,firmware',
+                            url: "${env.BUILD_URL}artifact/demo-firmware-${env.VERSION}.tar.gz",
+                            digest: digest
+                        )
+                    }
+
+                    // TODO: Add CloudBees Platform evidence publishing
+                    echo 'TODO: Publish Build Evidence'
                 }
             }
-        }
-    }
-
-    post {
-        always {
-            // Publish JUnit test results
-
-            // Archive coverage reports
-            archiveArtifacts artifacts: 'coverage.md,coverage-html/**', allowEmptyArchive: false, fingerprint: true
-
-            // Archive Snyk security scan results
-            archiveArtifacts artifacts: 'snyk-*.json,snyk-*.sarif', allowEmptyArchive: true, fingerprint: true
-
-            // Register security scans with CloudBees Unify
-            script {
-                if (fileExists('snyk-sast-results.sarif')) {
-                    registerSecurityScan(
-                        artifacts: 'snyk-sast-results.sarif',
-                        format: 'sarif',
-                        archive: true
-                    )
-                }
-                if (fileExists('snyk-sca-results.sarif')) {
-                    registerSecurityScan(
-                        artifacts: 'snyk-sca-results.sarif',
-                        format: 'sarif',
-                        archive: true
-                    )
-                }
-            }
-        }
-
-        success {
-            echo "✓ Pipeline completed successfully!"
-            echo "  Commit: ${env.GIT_COMMIT_SHORT}"
-            echo "  Branch: ${env.GIT_BRANCH_NAME}"
-        }
-
-        unstable {
-            echo "⚠ Pipeline completed with warnings"
-            echo "  This may indicate security findings or test failures that didn't fail the build"
-        }
-
-        failure {
-            echo "✗ Pipeline failed!"
-            echo "  Check the logs above for error details"
         }
     }
 }

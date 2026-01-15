@@ -1,86 +1,53 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
+# Build directories
 build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+Build/
+out/
 
-# PyInstaller
-*.manifest
-*.spec
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+build/Makefile
+CPackConfig.cmake
+CPackSourceConfig.cmake
+CTestTestfile.cmake
+build/*.cmake
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-test-results.xml
+# Compiled binaries
+*.exe
+*.out
+*.app
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
 
-# Flask stuff:
-instance/
-.webassets-cache
+# Object files
+*.o
+*.obj
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+# Debug files
+*.dSYM/
+*.pdb
 
-# IDEs
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+
+# macOS
 .DS_Store
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+# Temporary files
+*.tmp
+*.temp
 
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Snyk scan results
-snyk-*.json
-snyk-*.sarif
-
-# Local test scripts
-test-snyk-local.sh
+# Test output files
+test-results.xml
+test_results/
+*.testpass
+*.testfail
+professional_test_results.xml

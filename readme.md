@@ -1,123 +1,33 @@
-# Python Flask API
+# Demo Firmware Project  
 
-A simple Flask REST API with math utility endpoints and a complete CI/CD pipeline.
+A simulated embedded firmware application built with CMake. Demonstrates realistic firmware patterns with hardware abstraction layers, device drivers, and continuous sensor monitoring.
 
-## Features
-
-- Flask REST API with health checks and calculation endpoints
-- Comprehensive test suite with pytest
-- Automated testing and code quality checks
-- Security scanning integration
-- Artifact versioning and deployment automation
-
-## Quick Start
-
-### Prerequisites
-
-- Python 3.11 or higher
-- pip
-
-### Installation
+## Building
 
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd py-gha
-
-# Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements-dev.txt
+make          # Debug build
+make release  # Release build
 ```
 
-### Running the Application
+## Testing
 
 ```bash
-# Run the Flask app
-python app/main.py
-
-# Or using Flask CLI
-flask --app app.main run
+make test
 ```
 
-The application will be available at http://localhost:5000
-
-### Running Tests
+## Running
 
 ```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=app
-
-# Run with JUnit XML output (for CI)
-pytest --junitxml=test-results.xml
+make run
 ```
 
-### Code Quality
+The application simulates firmware startup, runs self-diagnostics, then continuously blinks an LED and reads temperature/humidity sensors. Press Ctrl+C to exit.
 
-```bash
-# Format code with Black
-black app/ tests/
+## What it does
 
-# Check formatting
-black --check app/ tests/
+- Initializes simulated hardware (GPIO, UART, sensors)
+- Runs hardware self-tests
+- Continuously monitors sensor data and controls LED
+- Outputs realistic telemetry data
+- Handles graceful shutdown
 
-# Run linting
-flake8 app/ tests/ --max-line-length=100
-```
-
-## API Endpoints
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /` | Hello World message |
-| `GET /health` | Health check endpoint |
-| `GET /api/add/<a>/<b>` | Add two numbers |
-| `GET /api/multiply/<a>/<b>` | Multiply two numbers |
-| `GET /api/fibonacci/<n>` | Calculate Fibonacci number |
-
-### Example Requests
-
-```bash
-# Hello endpoint
-curl http://localhost:5000/
-
-# Health check
-curl http://localhost:5000/health
-
-# Add numbers
-curl http://localhost:5000/api/add/5/3
-
-# Calculate Fibonacci
-curl http://localhost:5000/api/fibonacci/10
-```
-
-## CI/CD Pipeline
-
-The GitHub Actions workflow provides automated testing, code quality checks, and deployment:
-
-- **Testing**: Automated test execution with coverage reporting
-- **Code Quality**: Format checking with Black and linting with Flake8
-- **Security**: Black Duck SCA scanning for dependency vulnerabilities
-- **Build & Deploy**: Automated versioning, package building, and artifact management
-
-See [.github/workflows/ci.yml](.github/workflows/ci.yml) for the complete pipeline configuration.
-
-## Development
-
-This project uses standard Python development tools:
-
-- **pytest** for testing
-- **black** for code formatting
-- **flake8** for linting
-- **pytest-cov** for coverage reporting
-
-All dependencies are managed via pip and defined in `requirements.txt` and `requirements-dev.txt`.
-
-## License
-
-MIT
