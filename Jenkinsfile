@@ -60,6 +60,7 @@ pipeline {
     post {
         always {
             echo 'Pipeline completed.'
+            archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true, fingerprint: true
         }
         failure {
             echo 'Build or tests failed!'
