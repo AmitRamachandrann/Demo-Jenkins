@@ -105,6 +105,8 @@ spec:
                         tar -czf demo-firmware-${env.VERSION}.tar.gz -C dist .
                     """
                     archiveArtifacts artifacts: "demo-firmware-${env.VERSION}.tar.gz", fingerprint: true
+                    archiveArtifacts artifacts: "test-results.xml", fingerprint: true
+                    
 
                     script {
                         def digest = sh(script: "sha256sum demo-firmware-${env.VERSION}.tar.gz | awk '{print \$1}'", returnStdout: true).trim()
